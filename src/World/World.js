@@ -17,11 +17,12 @@ import { createControls } from './systems/controls.js';
 import { createRenderer } from './systems/renderer.js';
 import { Resizer } from './systems/Resizer.js';
 import { Loop } from './systems/Loop.js';
-import { createOutOfTube } from './systems/outoftube.js';
 
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
 import { UnsignedByteType, PMREMGenerator } from 'three';
-//import spaceWorld from '/assets/img/ArtStation-digital'
+//import  spaceWorld  from '/assets/img/space-stars.hdr?worker'
+
+
 
 
 let controls;
@@ -46,8 +47,7 @@ class World {
 
       new RGBELoader()
           .setDataType( UnsignedByteType )
-          .setPath( '/assets/img/' )
-          .load( 'ArtStation-digital.hdr', function ( texture ) {
+          .load( '/assets/img/space-stars.hdr', function ( texture ) {
   
           var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
   
@@ -67,7 +67,7 @@ class World {
   
     scene.add(ambientLight, mainLight);
 
-    //loop.updatables.push(camera);
+    loop.updatables.push(camera);
     
 
   

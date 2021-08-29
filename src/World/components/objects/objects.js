@@ -1,6 +1,6 @@
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { setupModel } from './setupModel.js';
-import { Mesh, AnimationClip } from 'three';
+//import { Mesh, AnimationClip } from 'three';
 
 
 
@@ -21,7 +21,7 @@ async function loadObjects() {
 
   human.scale.set(0.0035, 0.0035, 0.0035);
   human.position.set(0, -1.05 , -2.5);
-  human.rotation.set(2, 0, 3);
+  human.rotation.set(2, 0, 4);
   //human.castShadow = true;
   //human.receiveShadow = true;
 

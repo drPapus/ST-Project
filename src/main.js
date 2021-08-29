@@ -1,13 +1,15 @@
 import { World } from './World/World.js';
 import { createPreloader } from '/src/World/systems/preloader';
-import { createOutOfTube } from '/src/World/systems/outoftube';
+//import { createOutOfTube } from '/src/World/systems/outoftube';
+
 
 
 async function main() {
   // Get a reference to the container element
   const container = document.querySelector('#scene-container');
   const preloader = createPreloader();
-  const out = createOutOfTube();
+  //const out = createOutOfTube();
+
 
 
   // create a new world
